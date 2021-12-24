@@ -34,6 +34,7 @@ import {
   pixelToEIP,
   pointToEIP,
 } from '../utils/unit-conversion';
+import { fontFamilyToFontName } from '../utils/font-family-conversion';
 // FIXME: remove the cyclic dependency
 // eslint-disable-next-line import/no-cycle
 import { buildImage } from './render-document-file';
@@ -230,7 +231,8 @@ const buildRunProperties = (attributes) => {
           runPropertiesFragment.import(buildHighlight(attributes[key]));
           break;
         case 'font':
-          runPropertiesFragment.import(buildRunFontFragment('Courier'));
+          const runFontFragment = buildRunFontFragment(attributes[key]);
+          runPropertiesFragment.import(runFontFragment);
           break;
       }
     });
@@ -433,6 +435,9 @@ const buildRunOrRuns = (vNode, attributes) => {
           modifiedAttributes.backgroundColor = fixupColorCode(
             vNode.properties.style['background-color']
           );
+        }
+        if (vNode.properties.style['font-family']) {
+          modifiedAttributes.font = fontFamilyToFontName(vNode.properties.style['font-family']);
         }
         if (vNode.properties.style['font-size']) {
           modifiedAttributes.fontSize = fixupFontSize(vNode.properties.style['font-size']);
@@ -736,6 +741,9 @@ const buildParagraph = (vNode, attributes, docxDocumentInstance) => {
       ['left', 'right', 'center', 'justify'].includes(vNode.properties.style['text-align'])
     ) {
       modifiedAttributes.textAlign = vNode.properties.style['text-align'];
+    }
+    if (vNode.properties.style['font-family']) {
+      modifiedAttributes.font = fontFamilyToFontName(vNode.properties.style['font-family']);
     }
     // FIXME: remove bold check when other font weights are handled.
     if (vNode.properties.style?.['font-weight'] === 'bold') {
