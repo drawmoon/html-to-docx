@@ -34,7 +34,6 @@ import {
   pixelToEIP,
   pointToEIP,
 } from '../utils/unit-conversion';
-import { fontFamilyToFontName } from '../utils/font-family-conversion';
 // FIXME: remove the cyclic dependency
 // eslint-disable-next-line import/no-cycle
 import { buildImage } from './render-document-file';
@@ -414,7 +413,7 @@ const fixupMargin = (marginString) => {
   }
 };
 
-const buildRunOrRuns = (vNode, attributes) => {
+const buildRunOrRuns = (vNode, attributes, docxDocumentInstance) => {
   if (isVNode(vNode) && vNode.tagName === 'span') {
     const runFragments = [];
 
@@ -437,7 +436,9 @@ const buildRunOrRuns = (vNode, attributes) => {
           );
         }
         if (vNode.properties.style['font-family']) {
-          modifiedAttributes.font = fontFamilyToFontName(vNode.properties.style['font-family']);
+          modifiedAttributes.font = docxDocumentInstance.createFont(
+            vNode.properties.style['font-family']
+          );
         }
         if (vNode.properties.style['font-size']) {
           modifiedAttributes.fontSize = fixupFontSize(vNode.properties.style['font-size']);
@@ -468,7 +469,11 @@ const buildRunOrHyperLink = (vNode, attributes, docxDocumentInstance) => {
     const modifiedAttributes = { ...attributes };
     modifiedAttributes.hyperlink = true;
 
-    const runFragments = buildRunOrRuns(vNode.children[0], modifiedAttributes);
+    const runFragments = buildRunOrRuns(
+      vNode.children[0],
+      modifiedAttributes,
+      docxDocumentInstance
+    );
     if (Array.isArray(runFragments)) {
       for (let index = 0; index < runFragments.length; index++) {
         const runFragment = runFragments[index];
@@ -482,7 +487,7 @@ const buildRunOrHyperLink = (vNode, attributes, docxDocumentInstance) => {
 
     return hyperlinkFragment;
   }
-  const runFragments = buildRunOrRuns(vNode, attributes);
+  const runFragments = buildRunOrRuns(vNode, attributes, docxDocumentInstance);
 
   return runFragments;
 };
@@ -743,7 +748,9 @@ const buildParagraph = (vNode, attributes, docxDocumentInstance) => {
       modifiedAttributes.textAlign = vNode.properties.style['text-align'];
     }
     if (vNode.properties.style['font-family']) {
-      modifiedAttributes.font = fontFamilyToFontName(vNode.properties.style['font-family']);
+      modifiedAttributes.font = docxDocumentInstance.createFont(
+        vNode.properties.style['font-family']
+      );
     }
     // FIXME: remove bold check when other font weights are handled.
     if (vNode.properties.style?.['font-weight'] === 'bold') {
@@ -859,7 +866,7 @@ const buildParagraph = (vNode, attributes, docxDocumentInstance) => {
     if (isVNode(vNode) && vNode.tagName === 'img') {
       computeImageDimensions(vNode, modifiedAttributes);
     }
-    const runFragments = buildRunOrRuns(vNode, modifiedAttributes);
+    const runFragments = buildRunOrRuns(vNode, modifiedAttributes, docxDocumentInstance);
     if (Array.isArray(runFragments)) {
       for (let index = 0; index < runFragments.length; index++) {
         const runFragment = runFragments[index];
