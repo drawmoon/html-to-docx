@@ -1,6 +1,12 @@
 html-to-docx
 ============
 
+Fork from [hyperlex/html-to-docx](https://github.com/hyperlex/html-to-docx) and merge the code from the master branch of [privateOmega/html-to-docx](https://github.com/privateOmega/html-to-docx).
+
+CSS `font-family` support, see [PR](https://github.com/privateOmega/html-to-docx/pull/113) for details.
+
+============
+
 [![NPM Version][npm-image]][npm-url]
 
 html-to-docx is a js library for converting HTML documents to DOCX format supported by Microsoft Word 2007+, LibreOffice Writer, Google Docs, WPS Writer etc.
@@ -115,8 +121,8 @@ Please make sure to branch new branches off of develop for contribution.
 
 MIT
 
-[npm-image]: https://img.shields.io/npm/v/html-to-docx.svg
-[npm-url]: https://npmjs.org/package/html-to-docx
+[npm-image]: https://img.shields.io/npm/v/@drawmoon/html-to-docx.svg
+[npm-url]: https://npmjs.org/package/@drawmoon/html-to-docx
 [html-docx-js]: https://github.com/evidenceprime/html-docx-js "html-docx-js"
 [altchunks]: https://docs.microsoft.com/en-us/dotnet/api/documentformat.openxml.wordprocessing.altchunk?view=openxml-2.8.1 "altchunks"
 [libtidy]: https://github.com/jure/node-libtidy "libtidy"
