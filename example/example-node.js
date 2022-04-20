@@ -90,7 +90,7 @@ const htmlString = `<!DOCTYPE html>
             <li>Tea
                 <ol>
                     <li>Black tea
-                        <ol>
+                        <ol style="list-style-type:lower-alpha-bracket-end;" data-start="2">
                             <li>Srilankan <strong>Tea</strong>
                                 <ul>
                                     <li>Uva <b>Tea</b></li>
@@ -122,6 +122,15 @@ const htmlString = `<!DOCTYPE html>
             <tr>
                 <td>United States of America</td>
                 <td>Washington DC</td>
+            </tr>
+            <tr>
+                <td>Bolivia</td>
+                <td>
+                    <ol>
+                        <li>Sucre</li>
+                        <li>La Paz</li>
+                    </ol>
+                </td>
             </tr>
         </table>
     </body>
