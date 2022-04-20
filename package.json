@@ -1,6 +1,6 @@
 {
-  "name": "html-to-docx",
-  "version": "1.3.2",
+  "name": "@drawmoon/html-to-docx",
+  "version": "1.4.0",
   "description": "HTML to DOCX converter",
   "keywords": [
     "html",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/privateOmega/html-to-docx.git"
+    "url": "git+https://github.com/drawmoon/html-to-docx.git"
   },
   "author": "privateOmega <privateOmega@protonmail.com>",
   "contributors": [
@@ -35,9 +35,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/privateOmega/html-to-docx/issues"
+    "url": "https://github.com/drawmoon/html-to-docx/issues"
   },
-  "homepage": "https://github.com/privateOmega/html-to-docx#readme",
+  "homepage": "https://github.com/drawmoon/html-to-docx#readme",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
