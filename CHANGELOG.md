@@ -2,30 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.5.0](https://github.com/drawmoon/html-to-docx/compare/v1.2.4...v1.5.0) (2022-04-25)
-
-
-### Features
-
-* add support for lists within table cells ([b7d5ce7](https://github.com/drawmoon/html-to-docx/commit/b7d5ce7c6381c8e5ea79e537ee78768c9fefdbb5))
-* allow different list style types ([5579be2](https://github.com/drawmoon/html-to-docx/commit/5579be26639286bd0abd75cd3957795b52f044d3))
-* **font-family:** use the first element as the font name ([dc85331](https://github.com/drawmoon/html-to-docx/commit/dc853314675c96b2db1976ef3f83f30ec2e3ccaa))
-* **font:** register fonts in fontTable.xml ([cc7134f](https://github.com/drawmoon/html-to-docx/commit/cc7134f7919ef8183f1a48c9ef8dd6be7bba7309))
-* **indentation:** html margins to indentation [#106](https://github.com/drawmoon/html-to-docx/issues/106) ([0a8d6e6](https://github.com/drawmoon/html-to-docx/commit/0a8d6e6a8cfeffd9543e17e7d4bc729dfde88ed4))
+## [1.5.1](https://github.com/drawmoon/html-to-docx/compare/v1.5.0...v1.5.1) (2022-04-25)
 
 
 ### Bug Fixes
 
-* generate numbering for independent list types ([67151ce](https://github.com/drawmoon/html-to-docx/commit/67151ce957b01d4563b95def543f0bc004036153))
-* generating numbering xml based on type instead of type elements ([56c165e](https://github.com/drawmoon/html-to-docx/commit/56c165e6d5f9b3f26adc6508137022dbb69dae52))
-* nanoid api usage ([4aa4edc](https://github.com/drawmoon/html-to-docx/commit/4aa4edc088dcf4e031b850754a9f7b2d6740a6c3))
-* revert optional chaining on border check ([9ae5982](https://github.com/drawmoon/html-to-docx/commit/9ae59826b9885e867bfde26900e76fe34c1413b5))
-* update @rollup/plugin-node-resolve usage ([c359d92](https://github.com/drawmoon/html-to-docx/commit/c359d92afc7373fc5f236b61e8176c6bda3b7310))
-* update html-to-vdom import ([fbca2d3](https://github.com/drawmoon/html-to-docx/commit/fbca2d3b38edf6c14f883bf3f6f4eda1d8b55a8f))
+* font-family unable to change Chinese font ([8e82708](https://github.com/drawmoon/html-to-docx/commit/8e82708fcaa1d10f0af52f42797b76e57b920c02))
 
-### [1.4.1](https://github.com/drawmoon/html-to-docx/compare/v1.4.0...v1.4.1) (2022-04-20)
-
-## [1.4.0](https://github.com/drawmoon/html-to-docx/compare/v1.2.4...v1.4.0) (2022-04-20)
+## [1.5.0](https://github.com/drawmoon/html-to-docx/compare/v1.2.4...v1.5.0) (2022-04-25)
 
 
 ### Features
