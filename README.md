@@ -3,9 +3,10 @@ html-to-docx
 
 Fork from [hyperlex/html-to-docx](https://github.com/hyperlex/html-to-docx) and merge the code from the master branch of [privateOmega/html-to-docx](https://github.com/privateOmega/html-to-docx).
 
-CSS `font-family` support, see [PR](https://github.com/privateOmega/html-to-docx/pull/113) for details.
+- CSS `font-family` support, see [PR](https://github.com/privateOmega/html-to-docx/pull/113) for details.
+- Fix: `font-family` unable to change Chinese font.
 
-============
+---
 
 [![NPM Version][npm-image]][npm-url]
 
