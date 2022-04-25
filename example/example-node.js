@@ -50,6 +50,15 @@ const htmlString = `<!DOCTYPE html>
         <p style="font-family: SerifTestFont, serif;">Look at me, i'm a paragraph in SerifTestFont</p>
         <p style="font-family: SansTestFont, sans-serif;">Look at me, i'm a paragraph in SansTestFont</p>
         <p style="font-family: MonoTestFont, monospace;">Look at me, i'm a paragraph in MonoTestFont</p>
+        <p style="font-family:Microsoft YaHei;">看我，我是 微软雅黑 中的一个段落！</p>
+        <p style="font-family:SimHei;">看我，我是 黑体 中的一个段落！</p>
+        <p style="font-family:SimSun;">看我，我是 宋体 中的一个段落！</p>
+        <p style="font-family:KaiTi;">看我，我是 楷体 中的一个段落！</p>
+        <p style="font-family:STXingkai;">看我，我是 华文行楷 中的一个段落！</p>
+        <p style="font-family:YouYuan;">看我，我是 幼圆 中的一个段落！</p>
+        <p style="font-family:STKaiti;">看我，我是 华文楷体 中的一个段落！</p>
+        <p style="font-family:STSong;">看我，我是 华文宋体 中的一个段落！</p>
+        <p style="font-family:NSimSun;">看我，我是 新宋体 中的一个段落！</p>
         <blockquote>
             For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
         </blockquote>
