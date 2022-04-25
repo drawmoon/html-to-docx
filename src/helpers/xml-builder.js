@@ -86,6 +86,7 @@ const buildRunFontFragment = (fontName = defaultFont) =>
   fragment({ namespaceAlias: { w: namespaces.w } })
     .ele('@w', 'rFonts')
     .att('@w', 'ascii', fontName)
+    .att('@w', 'eastAsia', fontName)
     .att('@w', 'hAnsi', fontName)
     .up();
 
